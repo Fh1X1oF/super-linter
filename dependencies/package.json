@@ -2,7 +2,7 @@
   "name": "super-linter",
   "dependencies": {
     "@coffeelint/cli": "^4.1.2",
-    "@stoplight/spectral": "^5.8.0",
+    "@stoplight/spectral": "^5.8.1",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^3.10.1",
     "asl-validator": "^1.9.3",
@@ -26,6 +26,12 @@
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
     "typescript": "^4.1.3",
-    "tekton-lint": "^0.5.2"
-  }
+    "tekton-lint": "^0.5.2",
+    "@snyk/protect": "latest"
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
